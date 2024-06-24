@@ -1,0 +1,472 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Testt" this:Testt.in_Chemin_NouveauFichierMO="C:\Process\BKSOL_SDM_Report_PL_TauxMAD\MO\MO 2024\mai 2024\MO journée_03_mai_2024.xlsm" this:Testt.in_NouvelleDate_JJ_MM_YYYY="14/05/2024" this:Testt.in_Cellule="B;C;E;F;AA;AC;AD;AE;AG;AH;AI;AK;AL;AM;AO;AP;AQ;AS;AT;AU;AW;AX;AY;BA;BB;BC;BI;BN;BO;BQ;BR;BY;BZ;CB;CC;CK;CL;CM;CY;CZ;DB;DC;DQ;DR" this:Testt.in_Chemin_DernierFichierMO_Format_FormuleExcel="C:\Process\BKSOL_SDM_Report_PL_TauxMAD\MO\MO 2024\mai 2024\[MO journée_02_mai_2024.xlsm]" this:Testt.in_Chemin_NouveauDossierPNL="C:\Process\BKSOL_SDM_Report_PL_TauxMAD\2024\FICHIERS CALCULS PNL\MAI\03 05 2024" this:Testt.in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace="03 05 24" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Chemin_NouveauFichierMO" Type="InArgument(x:String)" />
+    <x:Property Name="in_NouvelleDate_JJ_MM_YYYY" Type="InArgument(x:String)" />
+    <x:Property Name="in_Cellule" Type="InArgument(x:String)" />
+    <x:Property Name="in_Chemin_DernierFichierMO_Format_FormuleExcel" Type="InArgument(x:String)" />
+    <x:Property Name="in_Chemin_NouveauDossierPNL" Type="InArgument(x:String)" />
+    <x:Property Name="in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>858,3256</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Testt_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Testt" sap:VirtualizedContainerService.HintSize="857,3191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Object" Name="Value" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT_Bilan" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="795,2939" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_Chemin_NouveauFichierMO]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="761,2789" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Remplissage_Feuille_Histo_Bilan" sap:VirtualizedContainerService.HintSize="699,672" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="DerniereDate_JJ_MM_YYYY" />
+                <Variable x:TypeArguments="x:Int32" Default="0" Name="Cpt" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Bilan]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="450,100" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A4" SheetName="histo BILAN MAD" />
+              <ui:FilterDataTable DataTable="[DT_Bilan]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_Bilan]" SelectColumnsMode="Remove">
+                <ui:FilterDataTable.Filters>
+                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                    <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                      <ui:FilterOperationArgument.Column>
+                        <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+                      </ui:FilterOperationArgument.Column>
+                      <ui:FilterOperationArgument.Operand>
+                        <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                      </ui:FilterOperationArgument.Operand>
+                    </ui:FilterOperationArgument>
+                  </scg:List>
+                </ui:FilterDataTable.Filters>
+                <ui:FilterDataTable.SelectColumns>
+                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                    <x:Null />
+                  </scg:List>
+                </ui:FilterDataTable.SelectColumns>
+              </ui:FilterDataTable>
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[DerniereDate_JJ_MM_YYYY]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[DT_Bilan.Rows(DT_Bilan.RowCount - 1)(0).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <Sequence DisplayName="Ajout_Ligne_NouvelleDate" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelWriteCell Cell="[&quot;A&quot;+(3 + DT_Bilan.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="histo BILAN MAD" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;MM/dd/yyyy&quot;)]" />
+                <ui:ExcelCopyPasteRange DestinationCell="[&quot;B&quot;+(3 + DT_Bilan.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DestinationSheet="histo BILAN MAD" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="388,262" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_2" SheetName="histo BILAN MAD" SourceRange="[&quot;B&quot;+(3 + DT_Bilan.RowCount ).ToString + &quot;:EK&quot; +(3 + DT_Bilan.RowCount ).ToString]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ExcelCopyPasteRange>
+              </Sequence>
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Cellule.Split(&quot;;&quot;c)]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="x:String">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="Cell" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Formula" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExcelReadCellFormula Cell="[cell + ( 3 + DT_Bilan.RowCount ).ToString]" DisplayName="Read Cell Formula" Formula="[Formula]" sap:VirtualizedContainerService.HintSize="354,100" sap2010:WorkflowViewState.IdRef="ExcelReadCellFormula_1" SheetName="histo BILAN MAD" />
+                      <ui:ExcelWriteCell Cell="[cell + ( 3 + DT_Bilan.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,111" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="histo BILAN MAD" Text="[&quot;=&quot; + Formula.Replace(&quot;'DONNEES JOURNEE TAUX'&quot;,&quot;'&quot;+in_Chemin_DernierFichierMO_Format_FormuleExcel+&quot;DONNEES JOURNEE TAUX'&quot;).TrimStart(&quot;+&quot;c).TrimStart(&quot;=&quot;c)]" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEach>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) &lt; DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).AddDays(-1)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                <ui:InterruptibleWhile.Body>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,694" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,187" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[DerniereDate_JJ_MM_YYYY]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[(DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(" 00:00:00",""), "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture).AddDays(1)).ToString("MM/dd/yyyy")]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Int32">[cpt]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Int32">[cpt + 1]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:MultipleAssign>
+                    <ui:ExcelWriteCell Cell="[&quot;A&quot;+(3 + DT_Bilan.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="histo BILAN MAD" Text="[DerniereDate_JJ_MM_YYYY]" />
+                    <ui:ExcelCopyPasteRange DestinationCell="[&quot;B&quot;+(3 + DT_Bilan.RowCount + cpt).ToString]" DestinationSheet="histo BILAN MAD" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="479,65" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_1" SheetName="histo BILAN MAD" SourceRange="[&quot;B&quot;+(3 + DT_Bilan.RowCount + cpt - 1).ToString + &quot;:EK&quot; +(3 + DT_Bilan.RowCount + cpt - 1).ToString]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ExcelCopyPasteRange>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,65" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,324" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelWriteCell Cell="[&quot;B&quot;+(5 + DT_IAM_Discounted.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="IAM DISCOUNTED" Text="[DerniereDate_CoCACT]" />
+                          <ui:ExcelWriteCell Cell="[&quot;B&quot;+(5 + DT_IAM_Discounted.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,111" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="IAM DISCOUNTED" Text="[(DateTime.ParseExact(DerniereDate_IAMDiscounted, &quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture).AddDays(1)).ToString(&quot;dd/MM/yyyy&quot;)]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;&quot;]" />
+                  </Sequence>
+                </ui:InterruptibleWhile.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InterruptibleWhile>
+            </Sequence>
+            <Sequence DisplayName="Remplissage_Feuille_+ValueSurOblig" sap:VirtualizedContainerService.HintSize="699,2032" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="DT_ValueOblig" />
+                <Variable x:TypeArguments="x:String" Name="DerniereDate_JJ_MM_YYYY" />
+                <Variable x:TypeArguments="sd:DataTable" Name="DT_PlusMoinsValues" />
+                <Variable x:TypeArguments="x:String" Name="Realized_Obligation" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadRange AddHeaders="False" DataTable="[DT_PlusMoinsValues]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="637,128" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" Range="A5" SheetName="Bonds" WorkbookPath="[in_Chemin_NouveauDossierPNL.TrimEnd(&quot;\&quot;c) + &quot;\PLUSOUMOINSVALUE&amp;TOMBEES &quot;+in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace+&quot;.xlsm&quot;]" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_ValueOblig]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="637,100" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A1" SheetName="+values sur oblig" />
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="637,65" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[DerniereDate_JJ_MM_YYYY]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[DT_ValueOblig.Rows(DT_ValueOblig.RowCount - 1)(0).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[Realized_Obligation]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[DT_PlusMoinsValues.Rows(DT_PlusMoinsValues.RowCount - 1)(22).ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <Sequence DisplayName="Ajout_Ligne_NouvelleDate" sap:VirtualizedContainerService.HintSize="637,65" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelWriteCell Cell="[&quot;A&quot;+( DT_ValueOblig.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_11" SheetName="+values sur oblig" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;MM/dd/yyyy&quot;)]" />
+                <ui:ExcelWriteCell Cell="[&quot;G&quot;+( DT_ValueOblig.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="+values sur oblig" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;MM/dd/yyyy&quot;)]" />
+                <ui:ExcelWriteCell Cell="[&quot;B&quot;+( DT_ValueOblig.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="388,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="+values sur oblig" Text="[Realized_Obligation]" />
+                <ui:ExcelCopyPasteRange DestinationCell="[&quot;C&quot;+(DT_ValueOblig.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DestinationSheet="+values sur oblig" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="388,279" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_6" SheetName="+values sur oblig" SourceRange="[&quot;C&quot;+(DT_ValueOblig.RowCount ).ToString + &quot;:E&quot; +(DT_ValueOblig.RowCount ).ToString]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ExcelCopyPasteRange>
+                <ui:ExcelCopyPasteRange DestinationCell="[&quot;H&quot;+(DT_ValueOblig.RowCount + ( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays).ToString]" DestinationSheet="+values sur oblig" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="388,262" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_8" SheetName="+values sur oblig" SourceRange="[&quot;H&quot;+(DT_ValueOblig.RowCount ).ToString + &quot;:J&quot; +(DT_ValueOblig.RowCount ).ToString]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ExcelCopyPasteRange>
+              </Sequence>
+              <Sequence DisplayName="Ajout_Ligne_JoursFeries" sap:VirtualizedContainerService.HintSize="637,1563" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Int32" Default="0" Name="cpt" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) &lt; DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).AddDays(-1)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="575,1452" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+                  <ui:InterruptibleWhile.Body>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,1315" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,187" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[DerniereDate_JJ_MM_YYYY]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[(DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(" 00:00:00",""), "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture).AddDays(1)).ToString("MM/dd/yyyy")]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:Int32">[cpt]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:Int32">[cpt + 1]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MultipleAssign>
+                      <ui:ExcelWriteCell Cell="[&quot;A&quot;+(DT_ValueOblig.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="+values sur oblig" Text="[DerniereDate_JJ_MM_YYYY]" />
+                      <ui:ExcelWriteCell Cell="[&quot;G&quot;+(DT_ValueOblig.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_9" SheetName="+values sur oblig" Text="[DerniereDate_JJ_MM_YYYY]" />
+                      <ui:ExcelCopyPasteRange DestinationCell="[&quot;B&quot;+(DT_ValueOblig.RowCount + cpt).ToString]" DestinationSheet="+values sur oblig" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="479,279" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_4" SheetName="+values sur oblig" SourceRange="[&quot;B&quot;+(DT_ValueOblig.RowCount + cpt - 1).ToString + &quot;:E&quot; +(DT_ValueOblig.RowCount + cpt - 1).ToString]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ExcelCopyPasteRange>
+                      <ui:ExcelCopyPasteRange DestinationCell="[&quot;H&quot;+(DT_ValueOblig.RowCount + cpt).ToString]" DestinationSheet="+values sur oblig" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="479,279" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_5" SheetName="+values sur oblig" SourceRange="[&quot;H&quot;+(DT_ValueOblig.RowCount + cpt - 1).ToString + &quot;:J&quot; +(DT_ValueOblig.RowCount + cpt - 1).ToString]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:ExcelCopyPasteRange>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,65" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,324" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExcelWriteCell Cell="[&quot;B&quot;+(5 + DT_IAM_Discounted.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="IAM DISCOUNTED" Text="[DerniereDate_CoCACT]" />
+                            <ui:ExcelWriteCell Cell="[&quot;B&quot;+(5 + DT_IAM_Discounted.RowCount + cpt).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="354,111" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="IAM DISCOUNTED" Text="[(DateTime.ParseExact(DerniereDate_IAMDiscounted, &quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture).AddDays(1)).ToString(&quot;dd/MM/yyyy&quot;)]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;&quot;]" />
+                    </Sequence>
+                  </ui:InterruptibleWhile.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InterruptibleWhile>
+              </Sequence>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="795,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;&quot;]" />
+  </Sequence>
+</Activity>
