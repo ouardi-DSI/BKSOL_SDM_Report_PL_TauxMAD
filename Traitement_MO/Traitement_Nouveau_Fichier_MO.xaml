@@ -56,7 +56,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>784,3593</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>857,3524</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Modification_MO_CellulleVeille_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -157,7 +157,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Traitement_Nouveau_Fichier_MO" sap:VirtualizedContainerService.HintSize="750,3528" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Traitement_Nouveau_Fichier_MO" sap:VirtualizedContainerService.HintSize="750,3459" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="Traitement_Nouveau_Fichier_MO" Name="Workflow_Name" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="Traitement_Terminee" />
@@ -172,25 +172,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="688,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="688,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">[Workflow_Name]</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_stepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="688,3151" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_Chemin_NouveauFichierMO]">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="688,3090" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_Chemin_NouveauFichierMO]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654,3001" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="654,2948" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="MAJ_Données_Veille" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="MAJ_Données_Veille" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -319,7 +319,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_DonneeJourneeTaux" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence DisplayName="Remplissage_Feuille_DonneeJourneeTaux" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_18">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Montant_BTBKT" />
                 <Variable x:TypeArguments="x:String" Name="Taux_BTBKT" />
@@ -336,13 +336,13 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Remplissage_Feuille_DonneeJourneeTaux</InArgument>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_stepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:ExcelWriteCell Cell="B1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="DONNEES JOURNEE TAUX" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;M/d/yyyy&quot;)]">
+              <ui:ExcelWriteCell Cell="B1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="DONNEES JOURNEE TAUX" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;M/d/yyyy&quot;)]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -350,7 +350,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteCell>
-              <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupValue="[in_NouvelleDate_JJ_MM_YYYY]">
+              <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupValue="[in_NouvelleDate_JJ_MM_YYYY]">
                 <ui:LookupDataTable.CellValue>
                   <OutArgument x:TypeArguments="x:String">[Tmp]</OutArgument>
                 </ui:LookupDataTable.CellValue>
@@ -371,7 +371,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LookupDataTable>
-              <ui:ExcelWriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_91" SheetName="DONNEES JOURNEE TAUX" Text="[(Double.Parse(Tmp.Replace(&quot;,&quot;,&quot;.&quot;)) / 100 ).ToString]">
+              <ui:ExcelWriteCell Cell="B2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_91" SheetName="DONNEES JOURNEE TAUX" Text="[(Double.Parse(Tmp.Replace(&quot;,&quot;,&quot;.&quot;).Trim) / 100 ).ToString]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -379,7 +379,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteCell>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,196" sap2010:WorkflowViewState.IdRef="Sequence_58">
                     <sap:WorkflowViewStateService.ViewState>
@@ -404,7 +404,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
-              <ui:ExcelWriteCell Cell="B3" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_41" SheetName="DONNEES JOURNEE TAUX" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY,&quot;dd/MM/yyyy&quot;,system.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(in_DerniereDate_JJ_MM_YYYY,&quot;dd/MM/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture)).TotalDays.tostring]">
+              <ui:ExcelWriteCell Cell="B3" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_41" SheetName="DONNEES JOURNEE TAUX" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY,&quot;dd/MM/yyyy&quot;,system.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(in_DerniereDate_JJ_MM_YYYY,&quot;dd/MM/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture)).TotalDays.tostring]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -412,7 +412,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteCell>
-              <Sequence DisplayName="Récupération_Donnees_PosRepo" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence DisplayName="Récupération_Donnees_PosRepo" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="DT_Repo" />
                 </Sequence.Variables>
@@ -446,7 +446,7 @@
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
-              <Sequence DisplayName="Récupération_Donnees_PosResale" sap:VirtualizedContainerService.HintSize="450,65" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence DisplayName="Récupération_Donnees_PosResale" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_9">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="DT_Resale" />
                 </Sequence.Variables>
@@ -696,7 +696,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_Taux" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence DisplayName="Remplissage_Feuille_Taux" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_17">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="PlacementJJ_E5" />
                 <Variable x:TypeArguments="x:String" Name="PlacementJJ_D5" />
@@ -982,7 +982,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_Histo_Bilan" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <Sequence DisplayName="Remplissage_Feuille_Histo_Bilan" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1228,7 +1228,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_+Value_Sur_Oblig" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_31">
+            <Sequence DisplayName="Remplissage_Feuille_+Value_Sur_Oblig" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_31">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_PlusMoinsValues" />
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_ValueOblig" />
@@ -1396,7 +1396,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_OPCVM" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <Sequence DisplayName="Remplissage_Feuille_OPCVM" sap:VirtualizedContainerService.HintSize="541,2114" sap2010:WorkflowViewState.IdRef="Sequence_37">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_Opcvm" />
                 <Variable x:TypeArguments="sd:DataTable" Name="DT_OPCVM_FR" />
@@ -1409,15 +1409,15 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="479,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="479,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">Remplissage_Feuille_OPCVM</InArgument>
                   <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_stepWorkflow]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Opcvm]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="479,100" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="A5" SheetName="opcvm" />
-              <ui:ReadRange AddHeaders="True" DataTable="[DT_OPCVM_FR]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A1" SheetName="OPCVM" WorkbookPath="[in_Chemin_NouveauDossierPNL.TrimEnd(&quot;\&quot;c) + &quot;\OPCVM &quot;+in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace+&quot;.xlsx&quot;]" />
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,187" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[DT_Opcvm]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="479,92" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="A5" SheetName="opcvm" />
+              <ui:ReadRange AddHeaders="True" DataTable="[DT_OPCVM_FR]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A1" SheetName="OPCVM" WorkbookPath="[in_Chemin_NouveauDossierPNL.TrimEnd(&quot;\&quot;c) + &quot;\OPCVM &quot;+in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace+&quot;.xlsx&quot;]" />
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
@@ -1445,10 +1445,10 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
-              <ui:ExcelWriteCell Cell="[&quot;A&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_50" SheetName="opcvm" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;MM/dd/yyyy&quot;)]" />
-              <ui:ExcelWriteCell Cell="[&quot;B&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_49" SheetName="opcvm" Text="[FinancialUnrealized]" />
-              <ui:ExcelCopyPasteRange DestinationCell="[&quot;C&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DestinationSheet="opcvm" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="479,279" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_8" SheetName="opcvm" SourceRange="[&quot;C&quot; + (4+ DT_Opcvm.RowCount ).ToString + &quot;:X&quot; + (4+ DT_Opcvm.RowCount ).ToString]" />
-              <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="479,332" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupValue="[in_NouvelleDate_JJ_MM_YYYY]">
+              <ui:ExcelWriteCell Cell="[&quot;A&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_50" SheetName="opcvm" Text="[(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)).ToString(&quot;MM/dd/yyyy&quot;)]" />
+              <ui:ExcelWriteCell Cell="[&quot;B&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_49" SheetName="opcvm" Text="[FinancialUnrealized]" />
+              <ui:ExcelCopyPasteRange DestinationCell="[&quot;C&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DestinationSheet="opcvm" DisplayName="Copy/Paste Range" sap:VirtualizedContainerService.HintSize="479,271" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_8" SheetName="opcvm" SourceRange="[&quot;C&quot; + (4+ DT_Opcvm.RowCount ).ToString + &quot;:X&quot; + (4+ DT_Opcvm.RowCount ).ToString]" />
+              <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="479,324" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupValue="[in_NouvelleDate_JJ_MM_YYYY]">
                 <ui:LookupDataTable.CellValue>
                   <OutArgument x:TypeArguments="x:String">[Tmp]</OutArgument>
                 </ui:LookupDataTable.CellValue>
@@ -1469,7 +1469,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LookupDataTable>
-              <ui:ExcelWriteCell Cell="[&quot;T&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_51" SheetName="opcvm" Text="[(Double.Parse(Tmp.Replace(&quot;,&quot;,&quot;.&quot;)) / 100 ).ToString]">
+              <ui:ExcelWriteCell Cell="[&quot;T&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_51" SheetName="opcvm" Text="[(Double.Parse(Tmp.Replace(&quot;,&quot;,&quot;.&quot;).Trim) / 100 ).ToString]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1477,7 +1477,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelWriteCell>
-              <ui:ExcelWriteCell Cell="[&quot;X&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,128" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_52" SheetName="opcvm" Text="[( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays.tostring]">
+              <ui:ExcelWriteCell Cell="[&quot;X&quot; + (5+ DT_Opcvm.RowCount ).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_52" SheetName="opcvm" Text="[( DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)  - DateTime.ParseExact(DerniereDate_JJ_MM_YYYY.Replace(&quot; 00:00:00&quot;,&quot;&quot;), &quot;MM/dd/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) ).TotalDays.tostring]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1493,7 +1493,7 @@
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </Sequence>
-            <Sequence DisplayName="Remplissage_Feuille_Desk_Actions" sap:VirtualizedContainerService.HintSize="592,65" sap2010:WorkflowViewState.IdRef="Sequence_44">
+            <Sequence DisplayName="Remplissage_Feuille_Desk_Actions" sap:VirtualizedContainerService.HintSize="592,57" sap2010:WorkflowViewState.IdRef="Sequence_44">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Daily_PNL" />
                 <Variable x:TypeArguments="x:String" Name="Monthly_PNL" />
@@ -1658,24 +1658,12 @@
               </Assign>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Traitement_MO\Remplissage_CocChange_Pos.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="530,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_79" UnSafe="False" WorkflowFileName="Traitement_MO\Remplissage_CocChange_Pos.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">
-                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_stepWorkflow" />
-                  </InOutArgument>
-                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_Dict_Change_Pos">
-                    <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="Dict_Change_Pos" />
-                  </OutArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Pos">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Chemin_Fichier_Pos&quot;).ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Devise_CocChange_Pos">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;Devise_CocChange_Pos&quot;).ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YY_AvecEspace">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_Year">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_nouvelleDate_Year" />
-                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_stepWorkflow]</InOutArgument>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_Dict_Change_Pos">[Dict_Change_Pos]</OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_chemin_Pos">[in_Config("Chemin_Fichier_Pos").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Devise_CocChange_Pos">[in_Config("Devise_CocChange_Pos").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YY_AvecEspace">[in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_Year">[in_nouvelleDate_Year]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="530,400" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[in_Config(&quot;Devise_DonneesChange_MID&quot;).ToString.split(&quot;;&quot;c)]">
