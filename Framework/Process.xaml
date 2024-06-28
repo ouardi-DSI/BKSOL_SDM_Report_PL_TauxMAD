@@ -280,7 +280,7 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_StepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1213,730" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1213,438" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DT_Equity" />
         <Variable x:TypeArguments="x:String" Name="FeesDaily" />
@@ -1327,7 +1327,7 @@
                                                                                             <av:PointCollection x:Key="ConnectorLocation">785,3217.5 785,3277.5</av:PointCollection>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                        <Sequence DisplayName="Traitement_FichierMO" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                                                        <Sequence DisplayName="Traitement_FichierMO" sap:VirtualizedContainerService.HintSize="450,370.99999999999994" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1349,34 +1349,90 @@
                                                                                           </ui:InvokeWorkflowFile>
                                                                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Traitement_MO\Traitement_Nouveau_Fichier_MO.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,137" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_59" UnSafe="False" WorkflowFileName="Traitement_MO\Traitement_Nouveau_Fichier_MO.xaml">
                                                                                             <ui:InvokeWorkflowFile.Arguments>
-                                                                                              <InOutArgument x:TypeArguments="x:String" x:Key="io_stepWorkflow">[io_StepWorkflow]</InOutArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_NouveauFichierMO">[Chemin_FichierMO]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_ListeCell_A_Changer_Veille">[in_ListeCell_A_Changer_Veille]</InArgument>
-                                                                                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YYYY">[in_nouvelleDate_JJ_MM_YYYY]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_NouveauDossierPNL">[Chemin_NouveauFichier_PNL]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace">[in_NouvelleDate_JJ_MM_YY_AvecEspace]</InArgument>
-                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_TMP">[DT_TMP]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Cellule_Histo_Bilan_AChanger">[in_Cellule_HistoBilan_A_Changer]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_DernierFichierMO_Format_FormuleExcel">[in_CHemin_DernierFichierMO_Format_FormuleExcel]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_DerniereDate_JJ_MM_YYYY">[in_DerniereDate_JJ_MM_YYYY]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_PNL_TradinLatent">[in_PNL_TradingLatent]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_AvantDerniereDate_DonneesOption">[in_Chemin_AvantDerniereDate_DonneesOption]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_DerniereDate_DonneesOption">[in_Chemin_DerniereDate_DonneesOption]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="In_TauxPlacement_EUR">[tauxPlacement_EUR]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="In_TauxEmprunt_EUR">[TauxEmprunt_EUR]</InArgument>
-                                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_CocChange">[CocChange]</OutArgument>
-                                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_CocOption">[CocOption]</OutArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_DerniereDate_JJ_MM_YY_AvecEspace">[in_DerniereDate_JJ_MM_YY_AvecEspace]</InArgument>
-                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_Equity">[DT_Equity]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_Daily">[FeesDaily]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_Montly">[Feesmontly]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_yearly">[FeesYearly]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Daily">[DividendesDaily]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Montly">[DividendesMontly]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Yearly">[DividendesYearly]</InArgument>
-                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_nouvelleDate_Year">[in_NouvelleDate_Annee_YYYY]</InArgument>
-                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_MID">[DT_MID]</InArgument>
+                                                                                              <InOutArgument x:TypeArguments="x:String" x:Key="io_stepWorkflow">
+                                                                                                <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_StepWorkflow" />
+                                                                                              </InOutArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_NouveauFichierMO">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Chemin_FichierMO" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_ListeCell_A_Changer_Veille">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_ListeCell_A_Changer_Veille" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                                                                                <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_JJ_MM_YYYY">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_nouvelleDate_JJ_MM_YYYY" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_NouveauDossierPNL">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Chemin_NouveauFichier_PNL" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_NouvelleDate_FinancialReport_JJ_MM_YY_AvecEspace">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NouvelleDate_JJ_MM_YY_AvecEspace" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_TMP">
+                                                                                                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_TMP" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Cellule_Histo_Bilan_AChanger">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Cellule_HistoBilan_A_Changer" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_DernierFichierMO_Format_FormuleExcel">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_CHemin_DernierFichierMO_Format_FormuleExcel" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_DerniereDate_JJ_MM_YYYY">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DerniereDate_JJ_MM_YYYY" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_PNL_TradinLatent">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_PNL_TradingLatent" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_AvantDerniereDate_DonneesOption">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Chemin_AvantDerniereDate_DonneesOption" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Chemin_DerniereDate_DonneesOption">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Chemin_DerniereDate_DonneesOption" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="In_TauxPlacement_EUR">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="tauxPlacement_EUR" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="In_TauxEmprunt_EUR">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TauxEmprunt_EUR" />
+                                                                                              </InArgument>
+                                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_CocChange">
+                                                                                                <VisualBasicReference x:TypeArguments="x:String" ExpressionText="CocChange" />
+                                                                                              </OutArgument>
+                                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_CocOption">
+                                                                                                <VisualBasicReference x:TypeArguments="x:String" ExpressionText="CocOption" />
+                                                                                              </OutArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_DerniereDate_JJ_MM_YY_AvecEspace">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_DerniereDate_JJ_MM_YY_AvecEspace" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_Equity">
+                                                                                                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_Equity" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_Daily">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FeesDaily" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_Montly">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Feesmontly" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Fees_yearly">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FeesYearly" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Daily">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DividendesDaily" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Montly">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DividendesMontly" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_Dividendes_Yearly">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DividendesYearly" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_nouvelleDate_Year">
+                                                                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NouvelleDate_Annee_YYYY" />
+                                                                                              </InArgument>
+                                                                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT_MID">
+                                                                                                <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="DT_MID" />
+                                                                                              </InArgument>
                                                                                             </ui:InvokeWorkflowFile.Arguments>
                                                                                           </ui:InvokeWorkflowFile>
                                                                                         </Sequence>

@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>858,1717</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153,1419</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Lecture_FichierTMP_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lecture_FichierTMP" sap:VirtualizedContainerService.HintSize="496,1652" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lecture_FichierTMP" sap:VirtualizedContainerService.HintSize="496,1354" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Workflow_Name" />
       <Variable x:TypeArguments="x:String" Name="Dt_str" />
@@ -141,14 +141,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,153" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Debut.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logs\Log_Debut.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">[Workflow_Name]</InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_StepWorkflow">[io_stepWorkflow]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="[in_CheminFichier_TMP]" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:ReadTextFile File="{x:Null}" Content="[Text]" DisplayName="Read Text File" FileName="[in_CheminFichier_TMP]" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[Text]</OutArgument>
       </Assign.To>
@@ -156,7 +156,7 @@
         <InArgument x:TypeArguments="x:String">[Text.Replace("""","").Replace("Marché monétaire interbancaire","").Replace("En millions de dirhams","").trim.Replace("%","")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators=";" DataTable="[out_DT_TMP]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="434,65" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Text]" NewLineSeparator="&#xA;" UseColumnHeader="True">
+    <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators=";" DataTable="[out_DT_TMP]" DisplayName="Generate Data Table From Text" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[Text]" NewLineSeparator="&#xA;" UseColumnHeader="True">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -164,69 +164,110 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GenerateDataTable>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,65" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dd871e11-b7d6-42a8-94f8-4e9e0002a1f8" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="592,690" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="530,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dd871e11-b7d6-42a8-94f8-4e9e0002a1f8" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date' ReferenceIdx='0' Name='Date'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Taux Moyen Pondéré' ReferenceIdx='1' Name='Taux Moyen Pondéré'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume JJ' ReferenceIdx='2' Name='Volume JJ'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Encours' ReferenceIdx='3' Name='Encours'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Date' attr='fulltext' /&gt;&lt;column name='Taux Moyen Pondéré' attr='fulltext' /&gt;&lt;column name='Volume JJ' attr='fulltext' /&gt;&lt;column name='Encours' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="401, 601, 729, 344" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="4ad77106-fff6-48c9-82f7-3f8727f1f50a" InformativeScreenshot="7ffe515573e27dbb58704f3657ae4335.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BANK AL-MAGHRIB - Marché monétaire interbancaire' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADjklEQVQ4T3WTa0zTZxTGz4dtWbbELH7YPoxsmojisi2EaAhFRwW8dCzKNtaKXDaZzraI3VzQjnGREahAW8qoYBmXtlBg5RbkJtBiwNVWt2RIVRgTpi2XSqEt0ghsjc/+lA+byfbhfZPz5j2/POec55DbaSP3gp2WXLNkv2+hX69ryGEfpft3jQH1cs7AUKfk5OitFhrsyCNTbzHZmD+j5gZamB0jAPQMwPb7DZq0DpD1ZnOgruT9uUsZ21GR9Q4MbdnpQz3FZBko/X+AZ3GaXPNTdNvUtLNGwvLoSrahS7sPLapQqC+GQ1N0UHHnZjOjzkojprp/AC7HJD12O/zBwwnzq+rCcGedPAiF/I9wLOhzZHKPorUyDJdzgtClSW19MGGi30a6yTl9dwOwxCS7nXb6Y2z4+UZF7LhOsRU5CTzsoTNIeCsFMZv4OH8kHh01bPzw3Q7oK44NT90ZpGXXzAbgKXPN2ax0OTvkenXBDjR+fxBRlIrDm/no1Ibi0+BERFAa8x6FOlkUyr7ZjnZV0vCKd3ED8JfPR/36cxqleCd6Gli4kBiHEBKB89IpSE/xIY45Dz4rGRf5R/xK2lTvoTT9DRjbs7v9AFNvSb5UtBktFREoz4hBKJMs3JuEs4d44AaIkR0nRN7xWOx/QYg0dhJ6dHugLYyE7KvX8LNRJaPhLom6+Mwr+FHJhvR0LNIPx6NPH+ZXI2R/grR9iYgLECD6OSEzjQPMVKJRK4lAYeqLaK/6jMfU8ZT6mr6ulX4ZgI5qFqrzODgZmoyUkGQIwr9Ayrvp4L4pRHzgcWTxeGhQ7IbqQjDMA4qj9kkLke/PVVrxusjQkqHVSrei4EQMIpmmcV4WICFQgHMfJCOTx8WHrwsgiuahRrIFt4zKzPX6/T147J4lr8dBa0+8dKWWLyvP2oaq/L2olx1CbcEB6BSRjGQOqvP3Q130NmOu0xXrOT7fGj1ZcRN5lx7R4ty435GjFj0NdeaK1UXBDCAMTcpo6ErWDxta6S40X/pY+8u1KpqfuUerq8u0surZALgcEzQ/fY8sBiUtM7GpTy4qEwcySljQFkWhMncX9OXcxv6Gs2TuLyXHwxFaW/M+C3DOjNNPvVJamJtgNtFAg23fplbm7oaSWagujVBzrT2HujV8unFVRg7b7f8GmK7K6RHjyvWVfjA2RGaDMsPYmlk2ZTVSb72IrtScYADyfwE89DeJW2QID7v4SAAAAABJRU5ErkJggg==" InformativeScreenshot="a2b75bb3b6514083f2f08e862ac46094.jpg" Selector="&lt;html app='chrome.exe' title='BANK AL-MAGHRIB - Marché monétaire interbancaire' /&gt;" Title="BANK AL-MAGHRIB - Marché monétaire interbancaire" Url="https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-monetaire/Marche-monetaire-interbancaire" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,389" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow(1)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString.trim("%"c)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Date' ReferenceIdx='0' Name='Date'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Taux Moyen Pondéré' ReferenceIdx='1' Name='Taux Moyen Pondéré'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume JJ' ReferenceIdx='2' Name='Volume JJ'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Encours' ReferenceIdx='3' Name='Encours'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Date' attr='fulltext' /&gt;&lt;column name='Taux Moyen Pondéré' attr='fulltext' /&gt;&lt;column name='Volume JJ' attr='fulltext' /&gt;&lt;column name='Encours' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" Version="V3">
-              <uix:NExtractData.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="401, 601, 729, 344" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="4ad77106-fff6-48c9-82f7-3f8727f1f50a" InformativeScreenshot="7ffe515573e27dbb58704f3657ae4335.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BANK AL-MAGHRIB - Marché monétaire interbancaire' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive" />
-              </uix:NExtractData.Target>
-            </uix:NExtractData>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADjklEQVQ4T3WTa0zTZxTGz4dtWbbELH7YPoxsmojisi2EaAhFRwW8dCzKNtaKXDaZzraI3VzQjnGREahAW8qoYBmXtlBg5RbkJtBiwNVWt2RIVRgTpi2XSqEt0ghsjc/+lA+byfbhfZPz5j2/POec55DbaSP3gp2WXLNkv2+hX69ryGEfpft3jQH1cs7AUKfk5OitFhrsyCNTbzHZmD+j5gZamB0jAPQMwPb7DZq0DpD1ZnOgruT9uUsZ21GR9Q4MbdnpQz3FZBko/X+AZ3GaXPNTdNvUtLNGwvLoSrahS7sPLapQqC+GQ1N0UHHnZjOjzkojprp/AC7HJD12O/zBwwnzq+rCcGedPAiF/I9wLOhzZHKPorUyDJdzgtClSW19MGGi30a6yTl9dwOwxCS7nXb6Y2z4+UZF7LhOsRU5CTzsoTNIeCsFMZv4OH8kHh01bPzw3Q7oK44NT90ZpGXXzAbgKXPN2ax0OTvkenXBDjR+fxBRlIrDm/no1Ibi0+BERFAa8x6FOlkUyr7ZjnZV0vCKd3ED8JfPR/36cxqleCd6Gli4kBiHEBKB89IpSE/xIY45Dz4rGRf5R/xK2lTvoTT9DRjbs7v9AFNvSb5UtBktFREoz4hBKJMs3JuEs4d44AaIkR0nRN7xWOx/QYg0dhJ6dHugLYyE7KvX8LNRJaPhLom6+Mwr+FHJhvR0LNIPx6NPH+ZXI2R/grR9iYgLECD6OSEzjQPMVKJRK4lAYeqLaK/6jMfU8ZT6mr6ulX4ZgI5qFqrzODgZmoyUkGQIwr9Ayrvp4L4pRHzgcWTxeGhQ7IbqQjDMA4qj9kkLke/PVVrxusjQkqHVSrei4EQMIpmmcV4WICFQgHMfJCOTx8WHrwsgiuahRrIFt4zKzPX6/T147J4lr8dBa0+8dKWWLyvP2oaq/L2olx1CbcEB6BSRjGQOqvP3Q130NmOu0xXrOT7fGj1ZcRN5lx7R4ty435GjFj0NdeaK1UXBDCAMTcpo6ErWDxta6S40X/pY+8u1KpqfuUerq8u0surZALgcEzQ/fY8sBiUtM7GpTy4qEwcySljQFkWhMncX9OXcxv6Gs2TuLyXHwxFaW/M+C3DOjNNPvVJamJtgNtFAg23fplbm7oaSWagujVBzrT2HujV8unFVRg7b7f8GmK7K6RHjyvWVfjA2RGaDMsPYmlk2ZTVSb72IrtScYADyfwE89DeJW2QID7v4SAAAAABJRU5ErkJggg==" InformativeScreenshot="a2b75bb3b6514083f2f08e862ac46094.jpg" Selector="&lt;html app='chrome.exe' title='BANK AL-MAGHRIB - Marché monétaire interbancaire' /&gt;" Title="BANK AL-MAGHRIB - Marché monétaire interbancaire" Url="https://www.bkam.ma/Marches/Principaux-indicateurs/Marche-monetaire/Marche-monetaire-interbancaire" />
-      </uix:NApplicationCard.TargetApp>
+          </ui:ForEachRow>
+          <ui:MergeDataTable Destination="[out_DT_TMP]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="530,156" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[ExtractDataTable]" />
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </uix:NApplicationCard>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,65" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-      <ui:ForEachRow.Body>
-        <ActivityAction x:TypeArguments="sd:DataRow">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,190" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[CurrentRow(1)]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString.trim("%"c)]</InArgument>
-              </Assign.Value>
-            </Assign>
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEachRow.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ForEachRow>
-    <ui:MergeDataTable Destination="[out_DT_TMP]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[ExtractDataTable]" />
-    <ui:RemoveDuplicateRows OutputDataTable="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_2">
+    </ui:CommentOut>
+    <ui:FilterDataTable DataTable="[out_DT_TMP]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_DT_TMP]" SelectColumnsMode="Remove">
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+            </ui:FilterOperationArgument.Column>
+          </ui:FilterOperationArgument>
+          <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">["Date"]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <x:Null />
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+    </ui:FilterDataTable>
+    <ui:RemoveDuplicateRows OutputDataTable="{x:Null}" DataTable="[out_DT_TMP]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[out_DT_TMP]</OutArgument>
       </Assign.To>
@@ -234,8 +275,8 @@
         <InArgument x:TypeArguments="sd:DataTable">[out_DT_TMP.AsEnumerable().Where(Function(row) DateTime.ParseExact(row.Field(Of String)(0), "dd/MM/yyyy", CultureInfo.InvariantCulture) &gt;= DateTime.ParseExact("01/01/"+in_Date_YYYY, "dd/MM/yyyy", CultureInfo.InvariantCulture)).OrderByDescending((Function(row) DateTime.ParseExact(row(0).tostring,"dd/MM/yyyy", CultureInfo.InvariantCulture))).CopyToDataTable()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:OutputDataTable DataTable="[out_DT_TMP]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[Dt_str]" />
-    <Assign sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <ui:OutputDataTable DataTable="[out_DT_TMP]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[Dt_str]" />
+    <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[out_NouvelleDateExiste_BKMA_Extraction]</OutArgument>
       </Assign.To>
@@ -243,7 +284,6 @@
         <InArgument x:TypeArguments="x:Boolean">[not (out_DT_TMP.AsEnumerable().Where(Function(row) DateTime.ParseExact(row.Field(Of String)(0), "dd/MM/yyyy", CultureInfo.InvariantCulture).Equals(DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, "dd/MM/yyyy", CultureInfo.InvariantCulture))).count).Equals(0)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,181" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[Dt_str]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Logs\Log_Fin.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logs\Log_Fin.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Workflow_name">[Workflow_Name]</InArgument>
