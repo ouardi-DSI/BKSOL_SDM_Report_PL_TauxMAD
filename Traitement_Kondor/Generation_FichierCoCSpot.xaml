@@ -15,7 +15,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857,2407</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153,2407</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Generation_CoCSpot_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,10 +140,10 @@
     </ui:InvokeWorkflowFile>
     <ui:RenameFileX DisplayName="Rename File" FilePath="[in_NewFolder_PNL.TrimEnd(&quot;\&quot;c) + &quot;\COCSPOT &quot;+in_AncienneDate_AvecEspace_JJ_MM_YY + &quot;.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="671,175" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="[in_NewFolder_PNL.TrimEnd(&quot;\&quot;c) + &quot;\COCSPOT &quot;+in_NouvelleDate_AvecEspace_JJ_MM_YY + &quot;.xlsx&quot;]" />
     <ui:ReadRange AddHeaders="False" DataTable="[DT_CoCSpot]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="671,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Password="{x:Null}" PreserveFormat="True" Range="A2" SheetName="Feuil1" WorkbookPath="[in_NewFolder_PNL.TrimEnd(&quot;\&quot;c) + &quot;\COCSPOT &quot;+in_NouvelleDate_AvecEspace_JJ_MM_YY + &quot;.xlsx&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="671,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="671,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[DerniereDate_CoCSpot]</OutArgument>
             </ui:AssignOperation.To>
@@ -151,7 +151,7 @@
               <InArgument x:TypeArguments="x:String">[DT_CoCSpot.Rows(DT_CoCSpot.RowCount - 1)(0).ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[Dernier_Opt]</OutArgument>
             </ui:AssignOperation.To>
@@ -159,7 +159,7 @@
               <InArgument x:TypeArguments="x:String">[DT_CoCSpot.Rows(DT_CoCSpot.RowCount - 1)(3).ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[Dernier_Change]</OutArgument>
             </ui:AssignOperation.To>
@@ -167,7 +167,7 @@
               <InArgument x:TypeArguments="x:String">[DT_CoCSpot.Rows(DT_CoCSpot.RowCount - 1)(1).ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[Dernier_BidAsk_Opt]</OutArgument>
             </ui:AssignOperation.To>
@@ -175,7 +175,7 @@
               <InArgument x:TypeArguments="x:String">[DT_CoCSpot.Rows(DT_CoCSpot.RowCount - 1)(4).ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[Dernier_BidAsk_Change]</OutArgument>
             </ui:AssignOperation.To>
@@ -186,7 +186,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="671,1406" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_NewFolder_PNL.TrimEnd(&quot;\&quot;c) + &quot;\COCSPOT &quot;+in_NouvelleDate_AvecEspace_JJ_MM_YY + &quot;.xlsx&quot;]">
+    <ui:ExcelApplicationScope AutoSave="False" DisplayName="Excel Application Scope" EditPassword="{x:Null}" ExistingWorkbook="{x:Null}" sap:VirtualizedContainerService.HintSize="671,1406" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Password="{x:Null}" Workbook="{x:Null}" WorkbookPath="[in_NewFolder_PNL.TrimEnd(&quot;\&quot;c) + &quot;\COCSPOT &quot;+in_NouvelleDate_AvecEspace_JJ_MM_YY + &quot;.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -198,7 +198,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[DateTime.ParseExact(DerniereDate_CoCSpot, &quot;M/d/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture) &lt; DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="575,1128" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile Condition="[DateTime.ParseExact(DerniereDate_CoCSpot, &quot;M/d/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture) &lt; DateTime.ParseExact(in_NouvelleDate_JJ_MM_YYYY, &quot;dd/MM/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture)]" CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="575,1128" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="{x:Null}">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="541,982" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
@@ -237,7 +237,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <ui:LookupDataTable DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" LookupValue="[Datetime.ParseExact(DerniereDate_CoCSpot, &quot;M/d/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;dd/MM/yyyy&quot;)]" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}">
+                  <ui:LookupDataTable LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[in_DT_TMP]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupValue="[Datetime.ParseExact(DerniereDate_CoCSpot, &quot;M/d/yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture).ToString(&quot;dd/MM/yyyy&quot;)]">
                     <ui:LookupDataTable.CellValue>
                       <OutArgument x:TypeArguments="x:String">[Tmp]</OutArgument>
                     </ui:LookupDataTable.CellValue>
